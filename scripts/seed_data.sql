@@ -2,7 +2,7 @@
 -- Données de test pour ITManagementDB
 -- Tablettes industrielles tactiles
 -- ============================================
-
+\encoding UTF8
 \c ITManagementDB;
 
 -- ============================================

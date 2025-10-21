@@ -3,7 +3,7 @@
 -- Date: 2025-10-21
 -- Description: Création des index pour optimiser les requêtes
 -- ============================================
-
+\encoding UTF8
 \c ITManagementDB;
 
 -- Index sur returned_products

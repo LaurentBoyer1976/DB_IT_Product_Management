@@ -3,7 +3,7 @@
 -- Date: 2025-10-21
 -- Description: Création de toutes les tables du système
 -- ============================================
-
+\encoding UTF8
 \c ITManagementDB;
 
 -- ============================================

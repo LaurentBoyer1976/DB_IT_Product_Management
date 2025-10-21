@@ -3,12 +3,16 @@
 -- Système de gestion du recyclage IT
 -- ============================================
 
--- Se déconnecter et supprimer la base
-\c postgres
-DROP DATABASE IF EXISTS ITManagementDB;
+\encoding UTF8
+
+-- Se connecter explicitement à postgres
+\connect -h 127.0.0.1 -U postgres postgres
+
+-- Supprimer la base (nom en minuscules)
+DROP DATABASE IF EXISTS itmanagementdb;
 
 -- Recréer avec UTF8
-CREATE DATABASE ITManagementDB
+CREATE DATABASE itmanagementdb
     WITH 
     OWNER = postgres
     ENCODING = 'UTF8'
@@ -16,13 +20,16 @@ CREATE DATABASE ITManagementDB
     LC_CTYPE = 'C'
     TEMPLATE = template0;
 
-COMMENT ON DATABASE ITManagementDB IS 'Base de données pour la gestion du recyclage et de la revente de produits IT retournés';
+COMMENT ON DATABASE itmanagementdb IS 'Base de données pour la gestion du recyclage et de la revente de produits IT retournés';
 
--- Se connecter à la base
-\c ITManagementDB;
+-- Petite attente (Windows)
+SELECT pg_sleep(0.5);
 
--- Créer les extensions nécessaires
+-- Se connecter explicitement à la nouvelle base
+\connect -h 127.0.0.1 -U postgres itmanagementdb
+
+-- Extensions nécessaires
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-CREATE EXTENSION IF NOT EXISTS "pg_trgm"; -- Pour la recherche full-text
+CREATE EXTENSION IF NOT EXISTS "pg_trgm"; -- Pour la recherche
 
 SELECT '✅ Base de données ITManagementDB créée avec succès!' as message;
