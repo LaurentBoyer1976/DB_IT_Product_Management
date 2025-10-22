@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Diagramme Base de Données IT Product Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .diagram-wrapper {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            padding: 20px;
+            background: #edf2f7;
+            border-radius: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-box {
+            width: 40px;
+            height: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .color-primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .color-secondary { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .color-tertiary { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .color-quaternary { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .color-quinary { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        
+        .info-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #bee3f8;
+            border-left: 4px solid #3182ce;
+            border-radius: 5px;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #2c5282;
+        }
+        
+        .mxgraph {
+            background: white !important;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗄️ Base de Données IT Product Management</h1>
+        <p class="subtitle">Gestion du Recyclage IT - Architecture Relationnelle</p>
+        
+        <div class="info-box">
+            <h3>📊 Vue d'ensemble</h3>
+            <p>Ce diagramme représente l'architecture complète de la base de données pour la gestion des produits IT retournés, incluant le suivi des contrôles techniques, des composants défectueux et des destinations de recyclage.</p>
+        </div>
+        
+        <div class="diagram-wrapper">
+            <!-- draw.io diagram -->
+            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;dark-mode&quot;:&quot;auto&quot;,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://raw.githubusercontent.com/jgraph/drawio-diagrams/dev/blog/entities-table.drawio&quot;}"></div>
+            <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+            
+            <noscript>
+                <p style="text-align: center; color: #e53e3e; padding: 20px;">
+                    ⚠️ Veuillez activer JavaScript pour visualiser le diagramme interactif.
+                </p>
+                <p style="text-align: center; padding: 10px;">
+                    Pour voir le diagramme original, ouvrez <strong>diag.html</strong> dans Draw.io Desktop ou visitez 
+                    <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
+                </p>
+            </noscript>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box color-primary"></div>
+                <span>Tables principales</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box color-secondary"></div>
+                <span>Tables de contrôle</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box color-tertiary"></div>
+                <span>Tables de référence</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box color-quaternary"></div>
+                <span>Tables de suivi</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box color-quinary"></div>
+                <span>Tables de composants</span>
+            </div>
+        </div>
+        
+        <div class="info-box" style="margin-top: 30px; background: #c6f6d5; border-left-color: #38a169;">
+            <h3>💡 Comment utiliser ce diagramme</h3>
+            <ul>
+                <li><strong>Zoom & Navigation</strong> : Utilisez les contrôles en haut pour zoomer et naviguer dans le diagramme</li>
+                <li><strong>Édition</strong> : Cliquez sur "Edit" pour modifier le diagramme dans Draw.io</li>
+                <li><strong>Lightbox</strong> : Activez le mode plein écran pour une meilleure visualisation</li>
+                <li><strong>Fichier source</strong> : Le fichier source est disponible dans <code>sitcomdb.drawio.xml</code></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
